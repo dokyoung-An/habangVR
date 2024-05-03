@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.0.10/20025
 // Filename: ?? VR ???.ggsk
-// Generated 2024-05-03T11:40:09
+// Generated 2024-05-03T12:22:43
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_roomchoice', 2, false, { ignoreInState: 0  });
@@ -1531,10 +1531,9 @@ function pano2vrSkin(player,base) {
 		}
 		me.__43.logicBlock_visible();
 		me.__43.onclick=function (e) {
-			me.__46.ggVisible = !me.__46.ggVisible;
-			var flag=me.__46.ggVisible;
 			me.__46.style.transition='none';
-			me.__46.style.visibility=((flag)&&(Number(me.__46.style.opacity)>0||!me.__46.style.opacity))?'inherit':'hidden';
+			me.__46.style.visibility=(Number(me.__46.style.opacity)>0||!me.__46.style.opacity)?'inherit':'hidden';
+			me.__46.ggVisible=true;
 			if (
 				(
 					((player.getViewerSize().width <= 640))
@@ -4122,7 +4121,7 @@ function pano2vrSkin(player,base) {
 		el=me.__=document.createElement('div');
 		el.ggId="\uc5b8\ud53d\uc158\ud64d\ubcf4";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
-		el.ggVisible=false;
+		el.ggVisible=true;
 		el.className="ggskin ggskin_container ";
 		el.ggType='container';
 		hs ='';
@@ -4130,7 +4129,7 @@ function pano2vrSkin(player,base) {
 		hs+='left : 0px;';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
-		hs+='visibility : hidden;';
+		hs+='visibility : inherit;';
 		hs+='width : 100%;';
 		hs+='pointer-events:none;';
 		el.setAttribute('style',hs);
@@ -4140,6 +4139,14 @@ function pano2vrSkin(player,base) {
 		}
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
+		}
+		me.__.onclick=function (e) {
+			me.__46.style.transition='none';
+			me.__46.style.visibility='hidden';
+			me.__46.ggVisible=false;
+			me.__.style.transition='none';
+			me.__.style.visibility='hidden';
+			me.__.ggVisible=false;
 		}
 		me.__.ggUpdatePosition=function (useTransition) {
 		}
@@ -4186,7 +4193,7 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_rectangle ";
 		el.ggType='rectangle';
 		hs ='';
-		hs+='background : #221e1f;';
+		hs+='background : #a1a1a1;';
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 5px;';
 		hs+='cursor : default;';
@@ -4240,11 +4247,6 @@ function pano2vrSkin(player,base) {
 			}
 		}
 		me.__0.logicBlock_scaling();
-		me.__0.onclick=function (e) {
-			me.__.style.transition='none';
-			me.__.style.visibility='hidden';
-			me.__.ggVisible=false;
-		}
 		me.__0.ggUpdatePosition=function (useTransition) {
 		}
 		el=me.__5=document.createElement('div');
@@ -4364,19 +4366,19 @@ function pano2vrSkin(player,base) {
 		el.ggId="\uc624\ub978\ucabd \uc2ac\ub85c\uac74";
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
-		el.className="ggskin ggskin_text headerb";
+		el.className="ggskin ggskin_text headerc";
 		el.ggType='text';
 		hs ='';
 		hs+='border : 0px solid #000000;';
 		hs+='color : rgba(255,255,255,0.784314);';
 		hs+='cursor : default;';
-		hs+='height : 20px;';
+		hs+='height : 15px;';
 		hs+='opacity : 0.8;';
 		hs+='position : absolute;';
 		hs+='right : 17px;';
 		hs+='top : 20px;';
 		hs+='visibility : inherit;';
-		hs+='width : 120px;';
+		hs+='width : 90px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
@@ -4386,6 +4388,8 @@ function pano2vrSkin(player,base) {
 		hs+='width: 100%;';
 		hs+='height: auto;';
 		hs+='max-height: 100%;';
+		hs+='font-size: 10px;';
+		hs+='font-weight: inherit;';
 		hs+='text-align: right;';
 		hs+='position: absolute;';
 		hs+='top: 50%;';
@@ -4458,13 +4462,13 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_image ";
 		el.ggType='image';
 		hs ='';
-		hs+='height : 20px;';
+		hs+='height : 16px;';
 		hs+='left : 17px;';
 		hs+='opacity : 0.8;';
 		hs+='position : absolute;';
 		hs+='top : 20px;';
 		hs+='visibility : inherit;';
-		hs+='width : 100px;';
+		hs+='width : 83px;';
 		hs+='pointer-events:auto;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
@@ -4582,20 +4586,20 @@ function pano2vrSkin(player,base) {
 		el.ggDx=0;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
 		el.ggVisible=true;
-		el.className="ggskin ggskin_text headerb";
+		el.className="ggskin ggskin_text headerc";
 		el.ggType='text';
 		hs ='';
 		hs+='border : 0px solid #000000;';
 		hs+='color : rgba(255,255,255,1);';
 		hs+='cursor : default;';
-		hs+='height : 100px;';
+		hs+='height : 120px;';
 		hs+='left : calc(50% - ((400px + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
 		hs+='top : 33px;';
 		hs+='visibility : inherit;';
 		hs+='width : 400px;';
 		hs+='pointer-events:auto;';
-		hs+='letter-spaing:2px;';
+		hs+='letter-spaing:2px; line-height:58px;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
 		hs ='';
@@ -4604,7 +4608,7 @@ function pano2vrSkin(player,base) {
 		hs+='width: 100%;';
 		hs+='height: 100%;';
 		hs+='font-size: 45px;';
-		hs+='font-weight: 600;';
+		hs+='font-weight: 900;';
 		hs+='text-align: center;';
 		hs+='white-space: pre-line;';
 		hs+='padding: 0px;';
@@ -4653,7 +4657,6 @@ function pano2vrSkin(player,base) {
 		hs+='visibility : inherit;';
 		hs+='width : 470px;';
 		hs+='pointer-events:none;';
-		hs+='overflow:hidden;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
 		me._vr.ggIsActive=function() {
@@ -4738,7 +4741,7 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_container ";
 		el.ggType='container';
 		hs ='';
-		hs+='bottom : 65px;';
+		hs+='bottom : 58px;';
 		hs+='height : 70px;';
 		hs+='left : calc(50% - ((92% + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
@@ -4781,7 +4784,7 @@ function pano2vrSkin(player,base) {
 		hs+='visibility : inherit;';
 		hs+='width : 100%;';
 		hs+='pointer-events:auto;';
-		hs+='font-family: \"Do Hyeon\", sans-serif; line-height:18px;';
+		hs+='font-family: \"Nanum Gothic\", sans-serif; line-height:18px;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
 		hs ='';
@@ -4789,6 +4792,8 @@ function pano2vrSkin(player,base) {
 		hs+='cursor: default;';
 		hs+='width: 100%;';
 		hs+='height: 100%;';
+		hs+='font-size: 12px;';
+		hs+='font-weight: inherit;';
 		hs+='text-align: left;';
 		hs+='white-space: pre-line;';
 		hs+='padding: 0px;';
@@ -4851,7 +4856,7 @@ function pano2vrSkin(player,base) {
 			return player.getCurrentNode();
 		}
 		me.__1.onclick=function (e) {
-			player.openUrl("www.unfiction.kr","");
+			player.openUrl("https:\/\/www.unfiction.kr\/","_blank");
 		}
 		me.__1.ggUpdatePosition=function (useTransition) {
 		}
@@ -4866,7 +4871,7 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_text ";
 		el.ggType='text';
 		hs ='';
-		hs+='background : #026df3;';
+		hs+='background : #221e1f;';
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 25px;';
 		hs+='bottom : 0px;';
@@ -4878,6 +4883,7 @@ function pano2vrSkin(player,base) {
 		hs+='visibility : inherit;';
 		hs+='width : 100%;';
 		hs+='pointer-events:auto;';
+		hs+='headerd';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
 		hs ='';
@@ -6274,7 +6280,7 @@ function pano2vrSkin(player,base) {
 	me.addSkin();
 	var style = document.createElement('style');
 	style.type = 'text/css';
-	style.appendChild(document.createTextNode('.ggskin { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; line-height: normal; } .ggskin.headers { font-family: "Nanum Pen Script", cursive; font-weight: 400; font-style: normal; font-size:14px; text-shadow:4px 4px 10px rgba(0,0,0,0.5); } .ggskin.headerb{ font-family: "Do Hyeon", sans-serif; font-weight: 400; font-style: normal; font-size:14px; text-shadow:4px 4px 10px rgba(0,0,0,0.5); } .ggmarkdown p,.ggmarkdown h1,.ggmarkdown h2,.ggmarkdown h3,.ggmarkdown h4 { margin-top: 0px } .ggmarkdown { white-space:normal }'));
+	style.appendChild(document.createTextNode('.ggskin { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; line-height: normal; } .ggskin.headers { font-family: "Nanum Pen Script", cursive; font-weight: 400; font-style: normal; font-size:14px; text-shadow:4px 4px 10px rgba(0,0,0,0.5); } .ggskin.headerb{ font-family: "Do Hyeon", sans-serif; font-weight: 400; font-style: normal; font-size:14px; text-shadow:4px 4px 10px rgba(0,0,0,0.5); } .ggskin.headerc{ font-family: "Nanum Gothic", sans-serif; font-weight: 400; font-style: normal; font-size:14px; text-shadow:4px 4px 10px rgba(0,0,0,0.5); } .ggskin.headerd{ font-family: "Black Han Sans", sans-serif; font-weight: 400; font-style: normal; font-size:14px; text-shadow:4px 4px 10px rgba(0,0,0,0.5); } .ggmarkdown p,.ggmarkdown h1,.ggmarkdown h2,.ggmarkdown h3,.ggmarkdown h4 { margin-top: 0px } .ggmarkdown { white-space:normal }'));
 	document.head.appendChild(style);
 	document.addEventListener('keyup', function(e) {
 		if (e.key === 'Enter' || e.key === ' ') {

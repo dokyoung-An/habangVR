@@ -6,7 +6,7 @@
 			"3rdparty/lottie/lottie.min.js"
 		],
 		"css": [
-			"https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Nanum+Pen+Script&display=swap"
+			"https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Nanum+Gothic&family=Nanum+Pen+Script&display=swap"
 		]
 	},
 	"skin": {
@@ -16,7 +16,7 @@
 	"player": {
 		"js": "pano2vr_player.js"
 	},
-	"creationdate": "2024-05-03T02:40:09.682Z",
+	"creationdate": "2024-05-03T03:22:43.109Z",
 	"configuration": "pano.xml",
 	"preview": {
 		"img": "preview.jpg",
