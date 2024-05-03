@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.0.10/20025
 // Filename: ?? VR ???.ggsk
-// Generated 2024-05-03T12:22:43
+// Generated 2024-05-03T13:57:10
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_roomchoice', 2, false, { ignoreInState: 0  });
@@ -4157,7 +4157,7 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_rectangle ";
 		el.ggType='rectangle';
 		hs ='';
-		hs+='background : rgba(34,30,31,0.470588);';
+		hs+='background : rgba(255,255,255,0.470588);';
 		hs+='border : 0px solid #000000;';
 		hs+='cursor : default;';
 		hs+='height : 100%;';
@@ -4193,7 +4193,7 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_rectangle ";
 		el.ggType='rectangle';
 		hs ='';
-		hs+='background : #a1a1a1;';
+		hs+='background : rgba(34,30,31,0.470588);';
 		hs+='border : 0px solid #000000;';
 		hs+='border-radius : 5px;';
 		hs+='cursor : default;';
@@ -4283,7 +4283,7 @@ function pano2vrSkin(player,base) {
 		el=me._image_2=document.createElement('div');
 		els=me._image_2__img=document.createElement('img');
 		els.className='ggskin ggskin_image_2';
-		hs=basePath + 'images/image_2.jpg';
+		hs=basePath + 'images/image_2.png';
 		els.setAttribute('src',hs);
 		els.ggNormalSrc=hs;
 		hs ='';
@@ -4305,7 +4305,7 @@ function pano2vrSkin(player,base) {
 		hs+='z-index: 0;';
 		hs+='height : 100%;';
 		hs+='left : calc(50% - ((228% + 0px) / 2) + 0px);';
-		hs+='opacity : 0.70002;';
+		hs+='opacity : 0.9;';
 		hs+='position : absolute;';
 		hs+='top : calc(50% - ((100% + 0px) / 2) + 0px);';
 		hs+='visibility : inherit;';
@@ -4328,6 +4328,40 @@ function pano2vrSkin(player,base) {
 		me._image_2.ggUpdatePosition=function (useTransition) {
 		}
 		me.__5.appendChild(me._image_2);
+		el=me._rectangle_1=document.createElement('div');
+		el.ggId="Rectangle 1";
+		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1,def:'' };
+		el.ggVisible=true;
+		el.className="ggskin ggskin_rectangle ";
+		el.ggType='rectangle';
+		hs ='';
+		hs+='background : rgba(34,30,31,0.196078);';
+		hs+='border : 0px solid #000000;';
+		hs+='cursor : default;';
+		hs+='height : 100%;';
+		hs+='left : 0px;';
+		hs+='position : absolute;';
+		hs+='top : 0px;';
+		hs+='visibility : inherit;';
+		hs+='width : 100%;';
+		hs+='pointer-events:auto;';
+		el.setAttribute('style',hs);
+		el.style.transformOrigin='50% 50%';
+		me._rectangle_1.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		el.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return player.getCurrentNode();
+		}
+		me._rectangle_1.ggUpdatePosition=function (useTransition) {
+		}
+		me.__5.appendChild(me._rectangle_1);
 		me.__0.appendChild(me.__5);
 		el=me._header=document.createElement('div');
 		el.ggId="Header";
